@@ -69,6 +69,7 @@ export const signUp =  async (req, res) => {
 
         const reservationsId = empty;
         const accommodationsId = empty;
+        const cards = empty;
 
         const newUser = {
             id,
@@ -78,7 +79,8 @@ export const signUp =  async (req, res) => {
             cellphone,
             password: hashedPassword,
             reservationsId,
-            accommodationsId
+            accommodationsId,
+            cards
         }
         
         genToken(id, res)

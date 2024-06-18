@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 import pingRoutes from './routes/ping.routes.js';
 import authRoutes from './routes/auth.routes.js';
-import paymentMethodsRoutes from './routes/paymentMethods.routes.js';
+import paymentMethodsRoutes from './routes/payment.routes.js';
 
 app.use('/ping', pingRoutes);
 app.use('/auth', authRoutes);

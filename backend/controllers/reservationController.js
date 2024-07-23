@@ -194,11 +194,39 @@ export const guestCancelReservation = async (req, res) => {
     }
 }
 
-// export const editReservation = async (req, res) => {
-//     try {
+export const editReservation = async (req, res) => {
+    try {
+        const { reserveId } = req.params
+        const { checkin, rates, numRooms, capacity } = req.body;
+        if (!checkin || !rates || !numRooms || !capacity) {
+            console.log("All fields are required");
+            return res.status(400).json({
+                error: "All fields are required"
+            });
+        }
+        const reserveIndex = reserveData.findIndex(reserve => String(reserve.id) === String(reserveId));
 
-//     }
-//     catch (error) {
 
-//     }
-// }
+        // let acomIndex = acomData.findIndex(acom => String(acom.id) === String(acomId))
+        // let userIndex = userData.findIndex(user => String(user.id) === String(userId))
+        // let acomName = acomData[acomIndex].nome
+        // let totalPaid = acomData[acomIndex].precoPorNoite * rates
+
+        reserveData[reserveIndex] = {
+            ...reserveData[reserveIndex],
+            numRooms,
+            capacity,
+            checkin,
+            rates,
+        }
+
+        fs.writeFileSync(path.resolve('./samples/reservation.json'), JSON.stringify(reserveData, null, 2));
+
+        res.status(200).json(reserveData[reserveIndex]);
+    }
+    catch (error) {
+        res.status(500).json({
+            error: "Internal Server Error (Cancel Reservation)"
+        });
+    }
+}

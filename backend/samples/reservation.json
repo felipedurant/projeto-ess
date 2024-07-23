@@ -79,11 +79,11 @@
   {
     "id": "80a533f3-bf36-43c6-b3eb-11efe66c1926",
     "acomName": "Propriedade 13",
-    "numRooms": 2,
-    "capacity": 4,
+    "numRooms": 7,
+    "capacity": 10,
     "totalPaid": 1800,
-    "checkin": "2024-03-02",
-    "rates": 3,
+    "checkin": "2025-12-31",
+    "rates": 4,
     "acomId": "13",
     "userId": "5e3ff57b-3917-4092-83ed-9c2b696bac69"
   },

@@ -39,3 +39,91 @@ defineFeature(feature, test => {
 
 
 })
+
+defineFeature(feature, test => {
+    test('Confirmar avaliação', ({ given, when, and, then }) => {
+        given(/^usuário de id "(.*)" está na página de escrever avaliação sobre a acomodação de id_acom "(.*)"$/, (arg0, arg1) => {
+
+        });
+
+        when(/^usuário insere "(.*)" em Limpeza$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Exatidão do Anúncio$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Check-in$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Comunicação$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Localização$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Custo-benefício$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Comentário$/, (arg0) => {
+
+        });
+
+        and('seleciona para concluir o comentário', () => {
+
+        });
+
+        then(/^Nota geral é calculada a parte da média de todas as notas, resultando em "(.*)"$/, (arg0) => {
+
+        });
+
+        and(/^sistema confere se nenhum campo da avaliação é "(.*)"$/, (arg0) => {
+
+        });
+
+        and(/^Código de resposta "(.*)"$/, (arg0) => {
+
+        });
+    });
+})
+
+defineFeature(feature, test => {
+    test('Avaliação incompleta', ({ given, when, and }) => {
+        given(/^usuário de id "(.*)" está na página de escrever avaliação sobre a acomodação de id_acom "(.*)"$/, (arg0, arg1) => {
+
+        });
+
+        when(/^usuário insere "(.*)" em Limpeza$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Exatidão do Anúncio$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Check-in$/, (arg0) => {
+
+        });
+
+        and(/^insere "(.*)" em Custo-benefício$/, (arg0) => {
+
+        });
+
+        and('seleciona para concluir o comentário', () => {
+
+        });
+
+        and(/^Sistema detecta campos "(.*)" dentro da avaliação e os sinaliza$/, (arg0) => {
+
+        });
+
+        and(/^Código de resposta "(.*)"$/, (arg0) => {
+
+        });
+    });
+})

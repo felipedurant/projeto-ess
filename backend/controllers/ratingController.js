@@ -24,11 +24,6 @@ export const createRating = async (req, res) => {
 
         const { resId } = req.params
 
-        //PRECISO DA RESID PARA VINCULAR AO RATING
-
-
-        //Verificação de validade das notas será realizada no front a partir de categorização das respostas
-
         let reserva = reserveData.find(reserve => String(reserve.id) === String(resId))
         let acomName = reserva.accommodationName
         let acomId = reserva.acomId
@@ -51,8 +46,6 @@ export const createRating = async (req, res) => {
         //Modificações em accommodations.json
         let acomodacao = acomData.find(acom => String(acom.id) === String(acomId))
         acomodacao.ratingsId.push(newRating.id)
-
-
 
         fs.writeFileSync(path.resolve('./samples/accommodations.json'), JSON.stringify(acomData, null, 2));
 

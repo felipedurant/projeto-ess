@@ -206,12 +206,6 @@ export const editReservation = async (req, res) => {
         }
         const reserveIndex = reserveData.findIndex(reserve => String(reserve.id) === String(reserveId));
 
-
-        // let acomIndex = acomData.findIndex(acom => String(acom.id) === String(acomId))
-        // let userIndex = userData.findIndex(user => String(user.id) === String(userId))
-        // let acomName = acomData[acomIndex].nome
-        // let totalPaid = acomData[acomIndex].precoPorNoite * rates
-
         reserveData[reserveIndex] = {
             ...reserveData[reserveIndex],
             numRooms,

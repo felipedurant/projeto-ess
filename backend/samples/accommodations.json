@@ -44,26 +44,29 @@
     "userId": "1"
   },
   {
-    "id": "a7e8aa27-07e4-41ae-8e23-55ace176fb02",
-    "acomName": "Propriedade 10",
-    "numRooms": 2,
-    "capacity": 4,
-    "totalPaid": 300,
-    "checkin": "2024-03-02",
-    "rates": 3,
-    "acomId": "10",
-    "userId": "5e3ff57b-3917-4092-83ed-9c2b696bac69"
+    "id": "11",
+    "nome": "Propriedade 4",
+    "quantidadeQuartos": 4,
+    "lotacaoMaxima": 10,
+    "precoPorNoite": 200,
+    "userId": "123",
+    "ratingsId": [],
+    "finalGrade": null
   },
   {
-    "id": "555",
-    "acomName": "Propriedade 10",
-    "numRooms": 2,
-    "capacity": 4,
-    "totalPaid": 300,
-    "checkin": "2024-03-02",
-    "rates": 3,
-    "acomId": "10",
-    "userId": "5e3ff57b-3917-4092-83ed-9c2b696bac69"
+    "id": "12",
+    "nome": "Propriedade 12",
+    "quantidadeQuartos": 4,
+    "lotacaoMaxima": 8,
+    "precoPorNoite": 48,
+    "userId": "123",
+    "ratingsId": [],
+    "finalGrade": null,
+    "desconto": 50,
+    "promoName": "Black friday",
+    "promoId": "12",
+    "data_inicio": "2003-01-22",
+    "data_fim": "2004-01-22"
   },
   {
     "id": "888",

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { MdDelete } from "react-icons/md";
-import { Link } from 'react-router-dom';
 import deletarPromo from '../../../services/promo/deletarPromo.js';
 import ListarPromo from '../../../services/promo/listarPromo.js';
 import NavBar from '../../Compartilhado/navbar.js';
@@ -50,8 +48,8 @@ const MyPromos = () => {
       <div>
         <header className='header-cadastro'>
           <h1>Minhas Promoções Cadastradas</h1>
-          <div className='cadastrar-popup'>
-            <PopUp title='Cadastrar Promoção'>
+          <div>
+            <PopUp title='Cadastrar Promoção' >
               <ModalCadastrar onClose={() => window.location.reload()} onUpdate={handleUpdatePromo} />
             </PopUp>
           </div>
@@ -71,13 +69,17 @@ const MyPromos = () => {
                   <p>Desconto: {promo.desconto}%</p>
                   <p>Início: {promo.data_inicio}</p>
                   <p>Fim: {promo.data_fim}</p>
-                  <Link to={`/promo/${promo.promoId}`} className='details-link'>Ver detalhes</Link>
+                  <p>Quantidade de quartos: {promo.quantidadeQuartos} </p>
+                  <p>Lotação máxima: {promo.lotacaoMaxima} </p>
+                  {/* <Link to={`/promo/${promo.promoId}`} className='details-link'>Ver detalhes</Link> */}
                 </div>
                 <div className='promo-actions'>
-                <MdDelete className={`lixeira ${promo.promoName.replace(/\s+/g, '-').toLowerCase()}`} onClick={() => handleDeletePromo(promo.promoId)} />
-                  <PopUp title='Editar Promoção' className={`edit-popup ${promo.promoName.replace(/\s+/g, '-').toLowerCase()}`}>
-                    <ModalEditarPromo promo={promo} onClose={() => window.location.reload()} onUpdate={handleUpdatePromo} />
-                  </PopUp>
+                {/* <MdDelete className={`lixeira ${promo.promoName.replace(/\s+/g, '-').toLowerCase()}`} onClick={() => handleDeletePromo(promo.promoId)} /> */}
+                <button className='delete-button' onClick={() => handleDeletePromo(promo.promoId)}>Deletar</button>
+                
+                <PopUp title='Editar Promoção' className={`edit-popup.${promo.promoName.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <ModalEditarPromo promo={promo} onClose={() => window.location.reload()} onUpdate={handleUpdatePromo} />
+                </PopUp>
                 </div>
               </div>
             ))
